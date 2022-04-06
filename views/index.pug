@@ -1,0 +1,35 @@
+doctype strict
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Why
+    link(rel="stylesheet" href="./main.css")
+  body
+    div.intro
+      center
+        h1.title why
+        div Why is a website for playing with numbers; you can crate various #[code: span.orange Why]s with which you can perform every arithmetical operation. To start, go to #[a(href="/start") the start page].
+    center
+      div.latest
+        - var recent = why[why.length - 1]
+        unless recent == undefined  
+          h2 latest posted why
+          div.why-display
+            each val, key in recent
+              div.why-property
+                code
+                  div.blue= key
+                  div.orange= val
+
+        //-
+          div.src-header source
+          div.src
+            code
+              div #[span.blue a] #[span.green =] #[span.orange 0]
+              div #[span.blue b] #[span.green =] #[span.orange 0]
+              div #[span.blue a] #[span.green +] #[span.orange 14]
+              div #[span.blue b] #[span.green +] #[span.orange 9]
+              div #[span.blue a] #[span.green +] #[span.blue b]
+              div #[span.blue a] #[span.green -] #[span.orange 4]
+              div #[span.green -]#[span.blue a]
+              div #[span.blue a]

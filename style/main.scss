@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Poppins&display=swap');
+
+body {
+  font-family: Poppins;
+  background: #eee;
+  color: black;
+  margin: 0;
+}
+
+h1.title {
+  font-size: 50px;
+}
+
+code {
+  font-family: DM Mono !important;
+  background: #ddd;
+  border-radius: 10px;
+  padding: 3.5px 5.5px;
+  margin: 0px .8px;
+
+  & .blue {
+    color: #0b52db;
+  }
+
+  & .green {
+    color: #85ab07;
+  }
+
+  & .orange {
+    color: #fc5a03;
+  }
+}
+
+div {
+  &.latest {
+    position: absolute;
+    bottom: 5vh;
+    width: 100vw;
+    margin: auto;
+
+    & div.why-display {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      justify-content: space-evenly;
+
+      & div.why-property {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+    }
+  }
+
+  & .src {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    text-align: left;
+    & > code { 
+      padding: 8px;
+    }
+  }
+
+  & .src-header {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
